@@ -48,7 +48,7 @@ before_install:
   - echo -e "84831b9409646a918e30573bab4c9c91346d8abd" >> $ANDROID_HOME/licenses/android-sdk-preview-license
   - cd TimeApp
 before_script:
-  - ionic cordova plugin add ../BaiduSpeechAndTTS
+  - ionic cordova plugin add ../BaiduSpeechAndTTS cordova-sqlite-storage
 script:
   - yarn install
   - cordova platform add android
