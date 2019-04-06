@@ -61,4 +61,4 @@ script:
   - npm run build
   - cordova platform remove android
   - cordova platform add android@7.1.4
-  - ionic cordova build android --verbose
+  - ./gradlew assembleDebug
