@@ -25,6 +25,7 @@ addons:
     - gradle
     - google-chrome-stable
 licenses:
+  - android-support-license-.+
   - android-sdk-preview-license-.+
   - android-sdk-license-.+
   - google-gdk-license-.+
