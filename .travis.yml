@@ -60,7 +60,7 @@ script:
   - npm run build
   - cordova platform remove android
   - cordova platform add android@7.1.4
-  - gradlew assembleDebug
+  - gradle assembleDebug
 env:
   global:
   - JAVA_HOME=/usr/lib/jvm/java-8-oracle
