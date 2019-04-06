@@ -57,5 +57,8 @@ script:
   - pwd
   - ionic cordova plugin ls
   - yarn install
+  - npm run clean
+  - npm run build
+  - cordova platform remove android
   - cordova platform add android
   - ionic cordova build android --verbose
