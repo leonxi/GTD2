@@ -40,6 +40,8 @@ cache:
 before_install:
   - export LANG=zh_CN.UTF-8
   - export CHROME_BIN=google-chrome
+  - export GRADLE_HOME=/usr/local/gradle
+  - export PATH=$GRADLE_HOME/bin:$PATH
   - nvm install 8
   - yarn global add ionic@4.1.2 phonegap plugman cordova@6.5.0
   - mkdir -p $ANDROID_HOME/licenses
@@ -51,7 +53,7 @@ before_script:
   - ionic cordova plugin add $TRAVIS_BUILD_DIR/BaiduSpeechAndTTS
   - ionic cordova plugin add cordova-sqlite-storage cordova-plugin-statusbar uk.co.workingedge.cordova.plugin.sqliteporter cordova-sqlite-storage cordova-plugin-whitelist com.telerik.plugins.nativepagetransitions cordova-plugin-nativeaudio cordova-plugin-vibration cordova-plugin-file-transfer cordova-plugin-local-notification cordova-plugin-ionic-webview cordova-plugin-splashscreen ionic-plugin-keyboard cordova-plugin-device cordova-plugin-console cordova-plugin-file cordova-plugin-calendar cordova-plugin-advanced-http cordova-plugin-android-permissions cordova-plugin-background-mode cordova-plugin-contacts cordova-plugin-network-information cordova-plugin-screen-orientation
 script:
-  - pwd
+  - gradle -version
   - ionic cordova plugin ls
   - yarn install
   - npm run clean
