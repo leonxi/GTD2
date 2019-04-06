@@ -55,4 +55,4 @@ before_script:
 script:
   - yarn install
   - cordova platform add android
-  - ionic cordova build android
+  - ionic cordova build android --verbose
