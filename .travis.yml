@@ -20,7 +20,7 @@ addons:
     - oracle-java8-set-default
     - yarn
     - jq
-    - gradle
+    - gradle@4.1
     - google-chrome-stable
 licenses:
   - android-sdk-preview-license-.+
