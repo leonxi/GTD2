@@ -65,7 +65,7 @@ script:
   - cordova platform remove android
   - cordova platform add android@7.1.4
   - ionic cordova build android
-after_deploy:
+after_script:
   - fir p $TRAVIS_BUILD_DIR/TimeApp/platforms/android/app/build/outputs/apk/debug/app-debug.apk -T $FIR_TOKEN
 env:
   global:
