@@ -47,6 +47,8 @@ before_install:
   - mkdir -p $ANDROID_HOME/licenses
   - echo -e "d56f5187479451eabf01fb78af6dfcb131a6481e" >> $ANDROID_HOME/licenses/android-sdk-license
   - echo -e "84831b9409646a918e30573bab4c9c91346d8abd" >> $ANDROID_HOME/licenses/android-sdk-preview-license
+  - rvm install 2.1.5
+  - gem install fir-cli
   - cd TimeApp
 before_script:
   - pwd
@@ -62,6 +64,8 @@ script:
   - cordova platform remove android
   - cordova platform add android@7.1.4
   - ionic cordova build android
+after_deploy:
+  - fir p $TRAVIS_BUILD_DIR/TimeApp/platforms/android/app/build/outputs/apk/debug/app-debug.apk -T $FIR_TOKEN
 env:
   global:
   - JAVA_HOME=/usr/lib/jvm/java-8-oracle
