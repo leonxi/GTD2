@@ -61,7 +61,7 @@ script:
   - npm run build
   - cordova platform remove android
   - cordova platform add android@7.1.4
-  - ionic cordova build android
+  - ionic cordova build android --buildConfig=$TRAVIS_BUILD_DIR/TimeApp/build.gradle
 env:
   global:
   - JAVA_HOME=/usr/lib/jvm/java-8-oracle
