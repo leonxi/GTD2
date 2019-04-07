@@ -69,6 +69,9 @@ export class ContactsService {
       }).then(data => {
         console.log("contacts data :: " + JSON.stringify(data));
         for (let contact of data) {
+          if (contact._objectInstance && contact._objectInstance !== undefined) {
+            contact = contact._objectInstance;
+          }
           for (let i = 0; contact.phoneNumbers != null && i < contact.phoneNumbers.length; i++) {
             //去除手机号中的空格
             contact.phoneNumbers[i].value = contact.phoneNumbers[i].value.replace(/\s/g, '');
