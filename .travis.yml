@@ -61,7 +61,7 @@ script:
   - npm run build
   - cordova platform remove android
   - cordova platform add android@7.1.4
-  - ./gradlew build assembleDebug
+  - ionic cordova build android
 env:
   global:
   - JAVA_HOME=/usr/lib/jvm/java-8-oracle
